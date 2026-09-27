@@ -1,0 +1,129 @@
+.footer {
+  padding: 20px;
+  border-top: 2px solid var(--window-light);
+  border-left: 2px solid var(--window-light);
+  border-right: 2px solid var(--window-shadow);
+  border-bottom: 2px solid var(--window-shadow);
+  background: var(--window-background);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.26);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #000080;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.brand:visited {
+  color: #000080;
+}
+
+.brand > span {
+  font-size: 26px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 18px;
+}
+
+.links a {
+  font-size: 11px;
+}
+
+.divider {
+  height: 2px;
+  margin: 16px 0;
+  border-top: 1px solid var(--window-dark);
+  border-bottom: 1px solid var(--window-light);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.bottom p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 10px;
+}
+
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.socialLinks a {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 4px 8px;
+  border-top: 2px solid var(--window-light);
+  border-left: 2px solid var(--window-light);
+  border-right: 2px solid var(--window-shadow);
+  border-bottom: 2px solid var(--window-shadow);
+  color: #000000;
+  background: var(--window-background);
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.socialLinks a:visited {
+  color: #000000;
+}
+
+.socialLinks a:hover {
+  color: #ffffff;
+  background: #000080;
+}
+
+@media (max-width: 760px) {
+  .top,
+  .bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .links {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .socialLinks {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .socialLinks a {
+    width: 100%;
+    justify-content: center;
+  }
+}

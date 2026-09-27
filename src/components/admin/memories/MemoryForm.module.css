@@ -1,0 +1,209 @@
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 2px solid #800000;
+  color: #640000;
+  background: #fff0f0;
+}
+
+.error > span {
+  font-size: 27px;
+}
+
+.error strong {
+  font-size: 12px;
+}
+
+.error p {
+  margin: 3px 0 0;
+  font-size: 10px;
+}
+
+.window {
+  padding: 3px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.18);
+}
+
+.titleBar {
+  display: flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 4px 3px 7px;
+  color: #ffffff;
+  background: #000080;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.titleBar span:last-child {
+  display: grid;
+  width: 19px;
+  height: 19px;
+  place-items: center;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  color: #000000;
+  background: #c0c0c0;
+}
+
+.windowContent {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #efefef;
+}
+
+.fieldsRow {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.35fr);
+}
+
+.field {
+  display: grid;
+  gap: 5px;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.field label strong {
+  color: #c00000;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 8px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 0;
+  color: #000000;
+  background: #ffffff;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  outline: none;
+}
+
+.field textarea {
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+.field small {
+  color: #555555;
+  font-size: 9px;
+}
+
+.fieldError {
+  color: #a00000 !important;
+  font-weight: 700;
+}
+
+.slugInput {
+  display: flex;
+  min-width: 0;
+  align-items: stretch;
+}
+
+.slugInput > span {
+  display: flex;
+  align-items: center;
+  padding: 0 7px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-bottom: 2px solid #ffffff;
+  color: #444444;
+  background: #d4d4d4;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.slugInput input {
+  border-left: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+}
+
+.actions button,
+.actions a {
+  min-width: 150px;
+}
+
+.actions button:disabled {
+  color: #808080;
+  cursor: wait;
+}
+
+@media (max-width: 650px) {
+  .fieldsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .slugInput {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .slugInput > span {
+    min-height: 30px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 0;
+  }
+
+  .slugInput input {
+    border-left: 2px solid #808080;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button,
+  .actions a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,331 @@
+.main {
+  margin-bottom: 12px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 8px;
+  padding: 7px 10px;
+  border-top: 2px solid var(--window-light);
+  border-left: 2px solid var(--window-light);
+  border-right: 2px solid var(--window-shadow);
+  border-bottom: 2px solid var(--window-shadow);
+  background: var(--window-background);
+  font-size: 11px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  padding: 5px;
+  border-bottom: 1px solid var(--window-dark);
+  background: var(--window-background);
+  font-size: 11px;
+}
+
+.toolbar a,
+.toolbar span {
+  min-height: 28px;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  color: #000000;
+  text-decoration: none;
+}
+
+.toolbar a:visited {
+  color: #000000;
+}
+
+.toolbar a:hover {
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  background: #d4d4d4;
+}
+
+.searchArea {
+  display: grid;
+  align-items: center;
+  gap: 26px;
+  padding: 24px;
+  border-top: 2px solid var(--window-dark);
+  border-left: 2px solid var(--window-dark);
+  border-right: 2px solid var(--window-light);
+  border-bottom: 2px solid var(--window-light);
+  background:
+    linear-gradient(
+      rgba(0, 0, 128, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 128, 0.04) 1px,
+      transparent 1px
+    ),
+    #ffffff;
+  background-size: 14px 14px;
+  grid-template-columns: minmax(0, 0.75fr) minmax(320px, 1.25fr);
+}
+
+.searchAssistant {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.assistantIcon {
+  display: grid;
+  width: 94px;
+  height: 94px;
+  flex: 0 0 94px;
+  place-items: center;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #f5f5f5;
+  font-size: 51px;
+}
+
+.searchAssistant h1 {
+  margin: 0;
+  color: #000080;
+  font-family: "Courier New", monospace;
+  font-size: clamp(22px, 4vw, 34px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.searchAssistant p {
+  margin: 9px 0 0;
+  color: #444444;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.searchForm {
+  padding: 16px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+}
+
+.searchForm label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.searchControls {
+  display: flex;
+  gap: 7px;
+}
+
+.searchControls input {
+  min-width: 0;
+  min-height: 38px;
+  flex: 1;
+  padding: 7px 9px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 0;
+  background: #ffffff;
+  outline: none;
+}
+
+.searchControls input:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+.searchForm small {
+  display: block;
+  margin-top: 6px;
+  color: #555555;
+  font-size: 9px;
+}
+
+.results {
+  min-height: 350px;
+  padding: 24px;
+  border-top: 2px solid var(--window-dark);
+  border-left: 2px solid var(--window-dark);
+  border-right: 2px solid var(--window-light);
+  border-bottom: 2px solid var(--window-light);
+  background: #ffffff;
+}
+
+.initialState,
+.noResults {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.initialState > span,
+.noResults > span {
+  font-size: 64px;
+  filter: grayscale(1);
+}
+
+.initialState strong,
+.noResults strong {
+  margin-top: 10px;
+  color: #000080;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+}
+
+.initialState p,
+.noResults p {
+  margin: 6px 0 0;
+  color: #555555;
+  font-size: 11px;
+}
+
+.noResults > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 17px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px auto;
+  padding: 14px;
+  border: 1px solid #806000;
+  background: #fff9d5;
+}
+
+.message > span {
+  font-size: 28px;
+}
+
+.message strong {
+  font-size: 12px;
+}
+
+.message p {
+  margin: 4px 0 0;
+  font-size: 10px;
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000080;
+}
+
+.resultsHeader p {
+  margin: 0;
+  color: #c00000;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.resultsHeader h2 {
+  margin: 4px 0 0;
+  color: #000080;
+  font-family: "Courier New", monospace;
+  font-size: 25px;
+  letter-spacing: -2px;
+}
+
+.resultsHeader > span {
+  padding: 4px 7px;
+  border: 1px solid #808080;
+  background: #eeeeee;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.statusBar {
+  display: flex;
+  gap: 3px;
+  padding-top: 3px;
+  background: var(--window-background);
+  font-size: 10px;
+}
+
+.statusBar span {
+  flex: 1;
+  padding: 3px 6px;
+  border-top: 1px solid var(--window-dark);
+  border-left: 1px solid var(--window-dark);
+  border-right: 1px solid var(--window-light);
+  border-bottom: 1px solid var(--window-light);
+}
+
+@media (max-width: 900px) {
+  .searchArea {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .searchArea,
+  .results {
+    padding: 14px;
+  }
+
+  .searchAssistant {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .assistantIcon {
+    width: 70px;
+    height: 70px;
+    flex-basis: 70px;
+    font-size: 39px;
+  }
+
+  .searchControls {
+    flex-direction: column;
+  }
+
+  .searchControls button {
+    width: 100%;
+  }
+
+  .resultsHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

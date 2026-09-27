@@ -1,0 +1,268 @@
+.wrapper {
+  width: 100%;
+}
+
+.hiddenInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.uploadWindow {
+  padding: 3px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+}
+
+.titleBar {
+  display: flex;
+  min-height: 27px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 4px 3px 7px;
+  color: #ffffff;
+  background: linear-gradient(
+    90deg,
+    #000080 0%,
+    #1084d0 100%
+  );
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.titleBar span:last-child {
+  display: grid;
+  width: 19px;
+  height: 19px;
+  place-items: center;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  color: #000000;
+  background: #c0c0c0;
+}
+
+.preview,
+.emptyPreview {
+  position: relative;
+  display: grid;
+  min-height: 300px;
+  margin-top: 3px;
+  place-items: center;
+  overflow: hidden;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(
+      45deg,
+      #eeeeee 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      #eeeeee 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 75%,
+      #eeeeee 75%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75%,
+      #eeeeee 75%
+    );
+  background-position:
+    0 0,
+    0 8px,
+    8px -8px,
+    -8px 0;
+  background-size: 16px 16px;
+}
+
+.preview img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: contain;
+}
+
+.previewOverlay {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 4px 7px;
+  border: 1px solid #ffffff;
+  color: #00ff00;
+  background: #000000;
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+}
+
+.emptyPreview {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+}
+
+.emptyPreview > span {
+  font-size: 64px;
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+
+.emptyPreview strong {
+  margin-top: 10px;
+  color: #000080;
+  font-size: 12px;
+}
+
+.emptyPreview p {
+  max-width: 380px;
+  margin: 6px 0 0;
+  color: #555555;
+  font-size: 10px;
+}
+
+.fileField {
+  display: grid;
+  align-items: center;
+  gap: 7px;
+  margin-top: 5px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.fileField > span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.fileField > div {
+  min-width: 0;
+  min-height: 30px;
+  overflow: hidden;
+  padding: 6px 7px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.removeButton {
+  color: #800000;
+}
+
+.progress {
+  height: 22px;
+  margin-top: 10px;
+  padding: 2px;
+  overflow: hidden;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #ffffff;
+}
+
+.progress > div {
+  width: 45%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #000080 0,
+      #000080 12px,
+      #1084d0 12px,
+      #1084d0 15px
+    );
+  animation: upload-progress 1.2s linear infinite;
+}
+
+@keyframes upload-progress {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(260%);
+  }
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px solid #800000;
+  color: #640000;
+  background: #fff0f0;
+  font-size: 10px;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 7px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #d4d4d4;
+}
+
+.information p {
+  margin: 0;
+  color: #444444;
+  font-size: 9px;
+}
+
+@media (max-width: 600px) {
+  .preview,
+  .emptyPreview {
+    min-height: 220px;
+  }
+
+  .preview img {
+    height: 240px;
+  }
+
+  .fileField {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}

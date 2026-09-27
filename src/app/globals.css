@@ -1,26 +1,200 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --page-background: #008080;
+  --window-background: #c0c0c0;
+  --window-light: #ffffff;
+  --window-middle: #dfdfdf;
+  --window-dark: #808080;
+  --window-shadow: #000000;
+
+  --title-blue: #000080;
+  --title-blue-light: #1084d0;
+
+  --text-primary: #000000;
+  --text-secondary: #3f3f3f;
+
+  --link: #0000ee;
+  --link-visited: #551a8b;
+  --selection: #000080;
+  --selection-text: #ffffff;
+
+  --content-width: 1120px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: var(--page-background);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-primary);
+  background-color: var(--page-background);
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.035) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.035) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 75%,
+      rgba(0, 0, 0, 0.035) 75%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 75%,
+      rgba(0, 0, 0, 0.035) 75%
+    );
+  background-position:
+    0 0,
+    0 4px,
+    4px -4px,
+    -4px 0;
+  background-size: 8px 8px;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+::selection {
+  color: var(--selection-text);
+  background: var(--selection);
+}
+
+a {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px dotted #000000;
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.site-shell {
+  width: min(calc(100% - 24px), var(--content-width));
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: 12px 0 24px;
+}
+
+.retro-button {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 0;
+  border-top: 2px solid var(--window-light);
+  border-left: 2px solid var(--window-light);
+  border-right: 2px solid var(--window-shadow);
+  border-bottom: 2px solid var(--window-shadow);
+  color: #000000;
+  background: var(--window-background);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.retro-button:visited {
+  color: #000000;
+}
+
+.retro-button:hover {
+  background: #d4d4d4;
+}
+
+.retro-button:active {
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  border-top-color: var(--window-shadow);
+  border-left-color: var(--window-shadow);
+  border-right-color: var(--window-light);
+  border-bottom-color: var(--window-light);
+}
+
+.retro-button--primary {
+  color: #ffffff;
+  background: #000080;
+}
+
+.retro-button--primary:visited {
+  color: #ffffff;
+}
+
+.retro-button--primary:hover {
+  background: #0000a8;
+}
+
+.retro-inset {
+  border-top: 2px solid var(--window-dark);
+  border-left: 2px solid var(--window-dark);
+  border-right: 2px solid var(--window-light);
+  border-bottom: 2px solid var(--window-light);
+}
+
+.retro-outset {
+  border-top: 2px solid var(--window-light);
+  border-left: 2px solid var(--window-light);
+  border-right: 2px solid var(--window-shadow);
+  border-bottom: 2px solid var(--window-shadow);
+}
+
+@media (max-width: 600px) {
+  .site-shell {
+    width: min(calc(100% - 12px), var(--content-width));
+    padding-top: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,0 +1,128 @@
+.previewBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 14px;
+  padding: 12px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.18);
+}
+
+.previewInformation {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 11px;
+}
+
+.previewIcon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #ffffff;
+  font-size: 24px;
+}
+
+.previewInformation strong {
+  color: #000080;
+  font-size: 12px;
+}
+
+.previewInformation p {
+  max-width: 580px;
+  margin: 4px 0 0;
+  color: #333333;
+  font-size: 9px;
+}
+
+.previewActions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 7px;
+}
+
+.status {
+  display: inline-flex;
+  min-height: 31px;
+  align-items: center;
+  padding: 4px 7px;
+  border: 1px solid #808080;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status_draft {
+  color: #604800;
+  background: #fff9d5;
+}
+
+.status_published {
+  color: #005f00;
+  background: #e5ffe5;
+}
+
+.status_archived {
+  color: #444444;
+  background: #eeeeee;
+}
+
+.previewFrame {
+  padding: 8px;
+  border: 2px dashed #000080;
+  background:
+    linear-gradient(
+      rgba(0, 0, 128, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 128, 0.04) 1px,
+      transparent 1px
+    ),
+    #e8e8e8;
+  background-size: 12px 12px;
+}
+
+@media (max-width: 900px) {
+  .previewBar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .previewActions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .previewActions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .previewActions a {
+    width: 100%;
+  }
+
+  .status {
+    justify-content: center;
+  }
+
+  .previewFrame {
+    padding: 4px;
+  }
+}

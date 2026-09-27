@@ -1,0 +1,288 @@
+.page {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 80px 20px 40px;
+  overflow: hidden;
+  background-color: #008080;
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.035) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.035) 25%,
+      transparent 25%
+    );
+  background-size: 8px 8px;
+}
+
+.desktopIcon {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+.desktopIcon > span {
+  font-size: 42px;
+}
+
+.desktopIcon small {
+  font-size: 11px;
+}
+
+.window {
+  width: min(100%, 540px);
+  padding: 3px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+  box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.35);
+}
+
+.titleBar {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 3px 4px 3px 7px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.titleBar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.controls {
+  display: flex;
+  gap: 3px;
+}
+
+.controls span {
+  display: grid;
+  width: 21px;
+  height: 21px;
+  place-items: center;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  color: #000000;
+  background: #c0c0c0;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.content {
+  padding: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.brandIcon {
+  font-size: 45px;
+  filter: drop-shadow(2px 2px 0 #808080);
+}
+
+.brand > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand strong {
+  color: #000080;
+  font-family: "Courier New", monospace;
+  font-size: 22px;
+  letter-spacing: -1px;
+}
+
+.brand strong span {
+  color: #c00000;
+}
+
+.brand small {
+  color: #444444;
+  font-size: 10px;
+}
+
+.divider {
+  height: 2px;
+  margin: 18px 0;
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #ffffff;
+}
+
+.introduction {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.keyIcon {
+  font-size: 38px;
+}
+
+.introduction h1 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.introduction p {
+  margin: 6px 0 0;
+  color: #333333;
+  font-size: 11px;
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 10px;
+  border: 1px solid #800000;
+  color: #640000;
+  background: #fff0f0;
+  font-size: 11px;
+}
+
+.error p {
+  margin: 0;
+}
+
+.form {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.form label {
+  align-self: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.form input {
+  min-width: 0;
+  height: 32px;
+  padding: 5px 7px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 0;
+  color: #000000;
+  background: #ffffff;
+  outline: none;
+}
+
+.form input:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+  grid-column: 1 / -1;
+}
+
+.formActions button,
+.formActions a {
+  min-width: 100px;
+}
+
+.security {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+  padding: 8px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #d4d4d4;
+}
+
+.security p {
+  margin: 0;
+  color: #333333;
+  font-size: 10px;
+}
+
+.statusBar {
+  display: flex;
+  gap: 3px;
+  padding-top: 3px;
+  font-size: 10px;
+}
+
+.statusBar span {
+  flex: 1;
+  padding: 3px 6px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer {
+  position: absolute;
+  bottom: 16px;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000000;
+}
+
+@media (max-width: 560px) {
+  .page {
+    padding: 100px 8px 60px;
+  }
+
+  .content {
+    padding: 18px 14px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .formActions {
+    justify-content: stretch;
+    grid-column: auto;
+  }
+
+  .formActions button,
+  .formActions a {
+    flex: 1;
+  }
+}

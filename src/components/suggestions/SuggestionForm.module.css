@@ -1,0 +1,269 @@
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 11px;
+  border: 1px solid #800000;
+  color: #640000;
+  background: #fff0f0;
+}
+
+.error > span {
+  font-size: 25px;
+}
+
+.error strong {
+  font-size: 12px;
+}
+
+.error p {
+  margin: 4px 0 0;
+  font-size: 10px;
+}
+
+.formSection,
+.successWindow {
+  padding: 3px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.18);
+}
+
+.sectionTitle,
+.successTitle {
+  display: flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 4px 3px 7px;
+  color: #ffffff;
+  background: #000080;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sectionTitle span:last-child,
+.successTitle span:last-child {
+  display: grid;
+  width: 19px;
+  height: 19px;
+  place-items: center;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  color: #000000;
+  background: #c0c0c0;
+}
+
+.sectionContent {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #efefef;
+}
+
+.fieldRow {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 5px;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.field label strong,
+.consent strong {
+  color: #c00000;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 8px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 0;
+  color: #000000;
+  background: #ffffff;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  outline: none;
+}
+
+.field textarea {
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+.field small {
+  color: #555555;
+  font-size: 9px;
+}
+
+.fieldError,
+.consentError {
+  color: #a00000 !important;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.optionalNotice {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #d4d4d4;
+}
+
+.optionalNotice p {
+  margin: 0;
+  color: #333333;
+  font-size: 10px;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+  font-size: 11px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.consent input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #c0c0c0;
+}
+
+.actions button,
+.actions a {
+  min-width: 160px;
+}
+
+.successWindow {
+  width: min(100%, 650px);
+  margin: 40px auto;
+}
+
+.successContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #efefef;
+}
+
+.successIcon {
+  font-size: 48px;
+}
+
+.successContent h2 {
+  margin: 0;
+  color: #000080;
+  font-family: "Courier New", monospace;
+  font-size: 21px;
+}
+
+.successContent p {
+  margin: 8px 0 0;
+  color: #333333;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.successActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px;
+}
+
+@media (max-width: 650px) {
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+
+  .actions,
+  .successActions {
+    flex-direction: column;
+  }
+
+  .actions button,
+  .actions a,
+  .successActions button,
+  .successActions a {
+    width: 100%;
+  }
+
+  .successContent {
+    flex-direction: column;
+    padding: 20px;
+  }
+}

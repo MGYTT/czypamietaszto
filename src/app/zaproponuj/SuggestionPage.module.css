@@ -1,0 +1,211 @@
+.main {
+  margin-bottom: 12px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 8px;
+  padding: 7px 10px;
+  border-top: 2px solid var(--window-light);
+  border-left: 2px solid var(--window-light);
+  border-right: 2px solid var(--window-shadow);
+  border-bottom: 2px solid var(--window-shadow);
+  background: var(--window-background);
+  font-size: 11px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  padding: 5px;
+  border-bottom: 1px solid var(--window-dark);
+  background: var(--window-background);
+  font-size: 11px;
+}
+
+.toolbar a,
+.toolbar span {
+  min-height: 28px;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  color: #000000;
+  text-decoration: none;
+}
+
+.toolbar a:visited {
+  color: #000000;
+}
+
+.toolbar a:hover {
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  background: #d4d4d4;
+}
+
+.introduction {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  border-top: 2px solid var(--window-dark);
+  border-left: 2px solid var(--window-dark);
+  border-right: 2px solid var(--window-light);
+  border-bottom: 2px solid var(--window-light);
+  background:
+    linear-gradient(
+      rgba(0, 0, 128, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 128, 0.04) 1px,
+      transparent 1px
+    ),
+    #ffffff;
+  background-size: 14px 14px;
+  grid-template-columns: 100px minmax(0, 1fr);
+}
+
+.introductionIcon {
+  display: grid;
+  width: 100px;
+  height: 100px;
+  place-items: center;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background: #ffffff;
+  font-size: 54px;
+}
+
+.introduction p {
+  margin: 0;
+  color: #c00000;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.introduction h1 {
+  margin: 4px 0 8px;
+  color: #000080;
+  font-family: "Courier New", monospace;
+  font-size: clamp(30px, 6vw, 51px);
+  line-height: 1;
+  letter-spacing: -3px;
+  text-shadow: 2px 2px 0 #c0c0c0;
+}
+
+.introduction > div:last-child > span {
+  display: block;
+  max-width: 760px;
+  color: #333333;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.rules {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  background: #c0c0c0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.rules article {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background: #efefef;
+}
+
+.rules article > span {
+  font-size: 23px;
+}
+
+.rules strong {
+  color: #000080;
+  font-size: 11px;
+}
+
+.rules p {
+  margin: 4px 0 0;
+  color: #444444;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.formArea {
+  padding: 22px;
+  border-top: 2px solid var(--window-dark);
+  border-left: 2px solid var(--window-dark);
+  border-right: 2px solid var(--window-light);
+  border-bottom: 2px solid var(--window-light);
+  background: #ffffff;
+}
+
+.error {
+  padding: 12px;
+  border: 1px solid #800000;
+  color: #640000;
+  background: #fff0f0;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.statusBar {
+  display: grid;
+  gap: 3px;
+  padding-top: 3px;
+  background: var(--window-background);
+  font-size: 9px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.statusBar span {
+  padding: 3px 6px;
+  border-top: 1px solid var(--window-dark);
+  border-left: 1px solid var(--window-dark);
+  border-right: 1px solid var(--window-light);
+  border-bottom: 1px solid var(--window-light);
+}
+
+@media (max-width: 750px) {
+  .rules {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .introduction {
+    align-items: flex-start;
+    padding: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  .introductionIcon {
+    width: 76px;
+    height: 76px;
+    font-size: 42px;
+  }
+
+  .formArea {
+    padding: 12px;
+  }
+
+  .statusBar {
+    grid-template-columns: 1fr;
+  }
+}
